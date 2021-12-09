@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Password generator that rotates input using the ROT algorithm."
+		/>
+		<meta
+			name="keywords"
+			content="rot rot 13 password password generator encryption algorithm"
+		/>
+		<meta author="Evan Kapantais" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Rot</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="brand">ROT Generator</h1>
+			<p class="author">
+				by
+				<a
+					href="https://evankapantais.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Evan Kapantais</a
+				>
+			</p>
+		</header>
+		<main>
+			<section class="main-section">
+				<div class="container">
+					<form>
+						<div class="controls">
+							<div class="input-group--row contro">
+								<select name="algo" id="algo">
+									<option value="rot-1">ROT 1</option>
+									<option value="rot-2">ROT 2</option>
+									<option value="rot-3">ROT 3</option>
+									<option value="rot-4">ROT 4</option>
+									<option value="rot-5">ROT 5</option>
+									<option value="rot-6">ROT 6</option>
+									<option value="rot-7">ROT 7</option>
+									<option value="rot-8">ROT 8</option>
+									<option value="rot-9">ROT 9</option>
+									<option value="rot-10">ROT 10</option>
+									<option value="rot-11">ROT 11</option>
+									<option value="rot-12">ROT 12</option>
+									<option value="rot-13">ROT 13</option>
+								</select>
+							</div>
+							<div class="input-group--row">
+								<select name="type" id="type">
+									<option value="forwards">Forwards</option>
+									<option value="backwards">Backwards</option>
+								</select>
+							</div>
+						</div>
+						<div class="input-group text-input-wrapper">
+							<input
+								type="text"
+								id="text"
+								placeholder="Your text here"
+								required
+							/>
+						</div>
+						<input type="submit" class="submit-button" />
+					</form>
+				</div>
+			</section>
+			<section class="main-section">
+				<div class="output-wrapper">
+					<p class="output">Your output will go here.</p>
+					<button type="button" class="copy-button">
+						<img src="copy.svg" alt="copy icon" />
+					</button>
+				</div>
+			</section>
+		</main>
+		<!-- <footer>
+			<p>
+				Developed by
+				<a
+					href="https://evankapantais.com"
+					target="_blank"
+					rel="noreferrer noopener"
+					>Evan Kapantais</a
+				>
+			</p>
+		</footer> -->
+		<script src="main.js"></script>
+	</body>
+</html>

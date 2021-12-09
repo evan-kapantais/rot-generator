@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-iPhone_12_12_Pro_1">
+      <rect width="64" height="64"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_12_12_Pro_1" data-name="iPhone 12, 12 Pro – 1" clip-path="url(#clip-iPhone_12_12_Pro_1)">
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(2 3)" fill="#fff" stroke="#222" stroke-width="4">
+      <rect width="48" height="48" rx="8" stroke="none"/>
+      <rect x="2" y="2" width="44" height="44" rx="6" fill="none"/>
+    </g>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(14 13)" fill="#fff" stroke="#222" stroke-width="4">
+      <rect width="48" height="48" rx="8" stroke="none"/>
+      <rect x="2" y="2" width="44" height="44" rx="6" fill="none"/>
+    </g>
+  </g>
+</svg>
