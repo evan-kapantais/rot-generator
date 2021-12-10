@@ -1,0 +1,26 @@
+main {
+	justify-content: center;
+	align-items: center;
+	padding: 6rem 2rem;
+}
+
+section:not(:last-of-type) {
+	margin-bottom: 2.5rem;
+}
+
+.container {
+	max-width: 600px;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+	font-weight: 400;
+}
+
+p {
+	line-height: 1.7;
+}
+
+p:not(:last-child) {
+	margin-bottom: 1rem;
+}

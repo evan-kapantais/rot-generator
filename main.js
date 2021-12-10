@@ -54,7 +54,7 @@ function handleFormSubmit(e) {
 	const type = e.target.querySelector('#type').value;
 	const output = document.querySelector('.output');
 
-	const places = Number(algo.substr(4));
+	const places = Number(algo.substr(3));
 
 	const rotated =
 		type === 'forwards'

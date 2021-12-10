@@ -10,24 +10,33 @@
 		/>
 		<meta
 			name="keywords"
-			content="rot rot 13 password password generator encryption algorithm"
+			content="rot rot 13 password password generator encryption algorithm caesar cipher"
 		/>
 		<meta author="Evan Kapantais" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/globals.css" />
+		<link rel="stylesheet" href="./css/index.css" />
 		<title>Rot</title>
 	</head>
 	<body>
 		<header>
-			<h1 class="brand">ROT Generator</h1>
-			<p class="author">
-				by
-				<a
-					href="https://evankapantais.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					>Evan Kapantais</a
-				>
-			</p>
+			<div>
+				<a href="/index.html" class="brand-link">
+					<h1 class="brand">
+						<span class="rot">ROT</span> <span>Generator</span>
+					</h1>
+				</a>
+				<p class="author">
+					by
+					<a
+						href="https://evankapantais.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Evan Kapantais</a
+					>
+				</p>
+			</div>
+			<a href="/about.html" class="about-link">About</a>
 		</header>
 		<main>
 			<section class="main-section">
@@ -36,19 +45,19 @@
 						<div class="controls">
 							<div class="input-group--row contro">
 								<select name="algo" id="algo">
-									<option value="rot-1">ROT 1</option>
-									<option value="rot-2">ROT 2</option>
-									<option value="rot-3">ROT 3</option>
-									<option value="rot-4">ROT 4</option>
-									<option value="rot-5">ROT 5</option>
-									<option value="rot-6">ROT 6</option>
-									<option value="rot-7">ROT 7</option>
-									<option value="rot-8">ROT 8</option>
-									<option value="rot-9">ROT 9</option>
-									<option value="rot-10">ROT 10</option>
-									<option value="rot-11">ROT 11</option>
-									<option value="rot-12">ROT 12</option>
-									<option value="rot-13">ROT 13</option>
+									<option value="rot1">ROT1</option>
+									<option value="rot2">ROT2</option>
+									<option value="rot3">ROT3</option>
+									<option value="rot4">ROT4</option>
+									<option value="rot5">ROT5</option>
+									<option value="rot6">ROT6</option>
+									<option value="rot7">ROT7</option>
+									<option value="rot8">ROT8</option>
+									<option value="rot9">ROT9</option>
+									<option value="rot10">ROT10</option>
+									<option value="rot11">ROT11</option>
+									<option value="rot12">ROT12</option>
+									<option value="rot13">ROT13</option>
 								</select>
 							</div>
 							<div class="input-group--row">
@@ -74,7 +83,7 @@
 				<div class="output-wrapper">
 					<p class="output">Your output will go here.</p>
 					<button type="button" class="copy-button">
-						<img src="copy.svg" alt="copy icon" />
+						<img src="./images/copy.svg" alt="copy icon" />
 					</button>
 				</div>
 			</section>
