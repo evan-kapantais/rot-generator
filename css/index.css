@@ -60,7 +60,20 @@
 .controls {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	gap: 1rem;
+}
+
+.checkbox-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+label {
+	font-size: 0.8rem;
+	display: inline-block;
+	user-select: none;
 }
 
 select:focus,

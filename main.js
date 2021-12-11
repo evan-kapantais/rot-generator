@@ -52,22 +52,23 @@ function handleFormSubmit(e) {
 	const input = e.target.querySelector('#text').value;
 	const algo = e.target.querySelector('#algo').value;
 	const type = e.target.querySelector('#type').value;
+	const trim = e.target.querySelector('#trim').checked;
 	const output = document.querySelector('.output');
 
 	const places = Number(algo.substr(3));
 
 	const rotated =
 		type === 'forwards'
-			? rotateStringForwards(input, places)
-			: rotateStringBackwards(input, places);
+			? rotateStringForwards(input, places, trim)
+			: rotateStringBackwards(input, places, trim);
 
 	output.textContent = rotated;
 
 	copyButton.classList.add('shown');
 }
 
-function rotateStringForwards(text, places) {
-	const arr = text.split(' ').join('').split('');
+function rotateStringForwards(text, places, trim = false) {
+	const arr = trim ? text.split(' ').join('').split('') : text.split('');
 
 	let output = '';
 
@@ -75,11 +76,11 @@ function rotateStringForwards(text, places) {
 		const currentIndex = alphabet.indexOf(letter.toLowerCase());
 		const isLetter = currentIndex !== -1;
 		const isSpecial = letter.match(/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/g);
+		const isSpace = letter === ' ';
 
-		if (isSpecial) {
-			output += letter;
-			return;
-		}
+		if (isSpace) return (output += letter);
+
+		if (isSpecial) return (output += letter);
 
 		// Check if digit is a number
 		if (!isLetter) {
@@ -105,8 +106,8 @@ function rotateStringForwards(text, places) {
 	return output;
 }
 
-function rotateStringBackwards(text, places) {
-	const arr = text.split(' ').join('').split('');
+function rotateStringBackwards(text, places, trim = false) {
+	const arr = trim ? text.split(' ').join('').split('') : text.split('');
 
 	let output = '';
 
@@ -114,11 +115,11 @@ function rotateStringBackwards(text, places) {
 		const currentIndex = alphabet.indexOf(letter.toLowerCase());
 		const isLetter = currentIndex !== -1;
 		const isSpecial = letter.match(/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/g);
+		const isSpace = letter === ' ';
 
-		if (isSpecial) {
-			output += letter;
-			return;
-		}
+		if (isSpace) return (output += letter);
+
+		if (isSpecial) return (output += letter);
 
 		// Check if digit is a number
 		if (!isLetter) {
