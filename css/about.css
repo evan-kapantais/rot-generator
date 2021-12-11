@@ -17,10 +17,10 @@ h1 {
 	font-weight: 400;
 }
 
-p {
+section p {
 	line-height: 1.7;
 }
 
-p:not(:last-child) {
+section p:not(:last-child) {
 	margin-bottom: 1rem;
 }

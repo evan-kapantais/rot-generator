@@ -28,15 +28,38 @@ a {
 	transition: all 200ms;
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style: none;
+}
+
+ul a {
+	color: grey;
+	font-size: 0.85rem;
+}
+
+ul a:hover {
+	text-decoration: underline;
+}
+
 header,
 footer {
 	padding: 2rem;
 }
 
-header {
+footer {
 	display: flex;
+	flex-wrap: wrap-reverse;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
+}
+
+footer ul {
+	display: flex;
+	gap: 0.5rem;
 }
 
 .brand-link {
@@ -58,7 +81,7 @@ header {
 
 .author {
 	color: grey;
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 }
 
 .about-link {
@@ -82,4 +105,18 @@ select {
 	outline: none;
 	border: none;
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+	header {
+		text-align: center;
+	}
+
+	footer {
+		flex-flow: column-reverse nowrap;
+	}
+
+	footer ul {
+		margin-bottom: 1rem;
+	}
 }
