@@ -22,22 +22,6 @@
 	display: flex;
 }
 
-.output {
-	margin-right: 1rem;
-}
-
-.output:after {
-	content: 'Copied!';
-	position: absolute;
-	bottom: -3rem;
-	left: 50%;
-	transform: translate(-50%, 1rem);
-	font-size: 1rem;
-	font-weight: 400;
-	opacity: 0;
-	transition: all 200ms;
-}
-
 .output.active:after {
 	opacity: 1;
 	transform: translate(-50%, 0);
@@ -55,6 +39,7 @@
 	border: none;
 	outline: none;
 	margin: 2rem 0;
+	width: 100%;
 }
 
 .controls {
@@ -112,7 +97,23 @@ select:active {
 	position: relative;
 }
 
+.output:after {
+	content: 'Copied!';
+	position: absolute;
+	bottom: -3rem;
+	left: 50%;
+	transform: translate(-50%, 1rem);
+	font-size: 1rem;
+	font-weight: 400;
+	opacity: 0;
+	transition: all 200ms;
+}
+
 .copy-button {
+	position: absolute;
+	top: 50%;
+	right: -2rem;
+	transform: translateY(calc(-50% + 1rem));
 	max-width: 24px;
 	width: 100%;
 	opacity: 0;
@@ -120,18 +121,18 @@ select:active {
 	transition: all 200ms;
 }
 
-.copy-button.shown:hover {
-	transform: translateY(-3px);
-}
-
-.copy-button.shown:active {
-	transform: scale(0.9);
-}
-
 .copy-button.shown {
 	opacity: 1;
 	pointer-events: all;
-	transform: translateY(0);
+	transform: translateY(-50%);
+}
+
+.copy-button.shown:hover {
+	transform: translateY(calc(-50% - 3px));
+}
+
+.copy-button.shown:active {
+	transform: translateY(-50%) scale(0.9);
 }
 
 img {
