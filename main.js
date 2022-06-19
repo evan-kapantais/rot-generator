@@ -1,6 +1,5 @@
 // TODO: download strings
 // TODO: delete saved strings
-// TODO: strings section visibility
 
 import alphabet from './alphabet.js';
 
@@ -115,7 +114,7 @@ function saveString() {
 
 	localStorage.setItem('rotside_strings', JSON.stringify(strings));
 
-	const stringsSection = document.querySelector('.strings-list ul');
+	const stringsSection = document.querySelector('.strings-list');
 	const stringsList = document.querySelector('.strings-list ul');
 
 	const li = document.createElement('li');
@@ -124,7 +123,7 @@ function saveString() {
 
 	showOutputMessage('saved');
 
-	if (strings.length > 0 && !stringsSection.classList.contains('visible')) {
+	if (!stringsSection.classList.contains('visible')) {
 		stringsSection.classList.add('visible');
 	}
 }

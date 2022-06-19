@@ -124,10 +124,13 @@ img {
 	transform: translateY(-50%);
 	left: 2rem;
 	visibility: hidden;
+	opacity: 0;
+	transition: opacity 200ms ease;
 }
 
 .strings-list.visible {
 	visibility: visible;
+	opacity: 1;
 }
 
 .strings-list h2 {
