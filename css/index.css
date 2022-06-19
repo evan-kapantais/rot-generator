@@ -123,6 +123,11 @@ img {
 	top: 50%;
 	transform: translateY(-50%);
 	left: 2rem;
+	visibility: hidden;
+}
+
+.strings-list.visible {
+	visibility: visible;
 }
 
 .strings-list h2 {

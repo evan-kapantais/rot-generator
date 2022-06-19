@@ -1,4 +1,6 @@
 // TODO: download strings
+// TODO: delete saved strings
+// TODO: strings section visibility
 
 import alphabet from './alphabet.js';
 
@@ -64,6 +66,8 @@ function checkLocalStorage() {
 		directionIcon.classList.remove('backward');
 	}
 
+	const stringsListElement = document.querySelector('.strings-list');
+
 	if (!localStrings) {
 		localStorage.setItem('rotside_strings', JSON.stringify([]));
 		return;
@@ -78,6 +82,10 @@ function checkLocalStorage() {
 		li.textContent = string;
 		stringsList.appendChild(li);
 	});
+
+	if (strings.length > 0) {
+		stringsListElement.classList.add('visible');
+	}
 }
 
 function showOutputMessage(type) {
@@ -107,6 +115,7 @@ function saveString() {
 
 	localStorage.setItem('rotside_strings', JSON.stringify(strings));
 
+	const stringsSection = document.querySelector('.strings-list ul');
 	const stringsList = document.querySelector('.strings-list ul');
 
 	const li = document.createElement('li');
@@ -114,6 +123,10 @@ function saveString() {
 	stringsList.appendChild(li);
 
 	showOutputMessage('saved');
+
+	if (strings.length > 0 && !stringsSection.classList.contains('visible')) {
+		stringsSection.classList.add('visible');
+	}
 }
 
 function downloadSavedStrings() {
