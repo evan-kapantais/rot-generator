@@ -1,0 +1,23 @@
+:root {
+	/* Colors */
+	--color-link-blue: rgb(33, 170, 255);
+	--color-link-pale: rgb(48, 153, 219);
+	--color-black: #222;
+	--color-grey01: #d4d4d4;
+	--color-grey02: #878787;
+
+	/* Font Size */
+	--fontSize-tiny: 13px;
+	--fontSize-small: 14px;
+	--fontSize-normal: 16px;
+	--fontSize-large: 24px;
+	--fontSize-xlarge: 55px;
+	--bp: 750px;
+
+	/* Spacing */
+	--spacing-small: 8px;
+	--spacing-normal: 16px;
+	--spacing-large: 24px;
+	--spacing-xlarge: 32px;
+	--spacing-xxlarge: 48px;
+}

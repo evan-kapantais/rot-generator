@@ -1,3 +1,6 @@
+@import 'variables.css';
+@import 'globals.css';
+
 main {
 	justify-content: center;
 	align-items: center;
@@ -18,9 +21,18 @@ h1 {
 }
 
 section p {
-	line-height: 1.7;
+	line-height: 1.75;
 }
 
 section p:not(:last-child) {
 	margin-bottom: 1rem;
+}
+
+section a {
+	color: var(--color-link-pale);
+}
+
+section a:hover {
+	color: var(--color-link-blue);
+	text-decoration: none;
 }

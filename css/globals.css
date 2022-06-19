@@ -1,7 +1,4 @@
-:root {
-	--link-blue: rgb(33, 170, 255);
-	--link-pale: rgb(48, 153, 219);
-}
+@import 'variables.css';
 
 * {
 	margin: 0;
@@ -23,26 +20,18 @@ body {
 }
 
 a {
-	color: var(--link-blue);
+	color: var(--color-grey02);
+	font-size: var(--fontSize-small);
 	text-decoration: none;
-	transition: all 200ms;
+	transition: all 150ms;
 }
 
 a:hover {
-	text-decoration: underline;
+	color: var(--color-black);
 }
 
 ul {
 	list-style: none;
-}
-
-ul a {
-	color: grey;
-	font-size: 0.85rem;
-}
-
-ul a:hover {
-	text-decoration: underline;
 }
 
 header,
@@ -50,16 +39,12 @@ footer {
 	padding: 2rem;
 }
 
-footer {
+/* Header */
+
+header {
 	display: flex;
-	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 	align-items: center;
-}
-
-footer ul {
-	display: flex;
-	gap: 0.5rem;
 }
 
 .brand-link {
@@ -79,18 +64,21 @@ footer ul {
 	margin-bottom: 0.3rem;
 }
 
+.nav-list {
+	display: flex;
+	gap: var(--spacing-normal);
+}
+
+footer {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .author {
 	color: grey;
 	font-size: 0.85rem;
-}
-
-.about-link {
-	color: grey;
-}
-
-.about-link:hover {
-	color: var(--link-blue);
-	text-decoration: none;
 }
 
 main {

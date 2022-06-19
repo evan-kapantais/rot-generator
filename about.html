@@ -14,7 +14,6 @@
 		/>
 		<meta author="Evan Kapantais" />
 		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-		<link rel="stylesheet" href="./css/globals.css" />
 		<link rel="stylesheet" href="./css/about.css" />
 		<title>ROT</title>
 	</head>
@@ -22,9 +21,48 @@
 		<header>
 			<div>
 				<a href="index.html" class="brand-link">
-					<h1 class="brand">ROT Generator</h1>
+					<h1 class="brand">ROTSIDE_</h1>
 				</a>
 			</div>
+			<nav>
+				<ul class="nav-list">
+					<li>
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li>
+						<a
+							class="nav-link"
+							href="https://github.com/evan-kapantais/rot-generator"
+							target="_blank"
+							rel="noreferrer"
+							>Github</a
+						>
+					</li>
+					<li>
+						<a
+							class="nav-link"
+							href="https://github.com/evan-kapantais/rot-generator/issues"
+							target="_blank"
+							rel="noreferrer"
+							>Submit an Issue</a
+						>
+					</li>
+					<li>
+						<script
+							data-name="BMC-Widget"
+							data-cfasync="false"
+							src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+							data-id="evankapantais"
+							data-description="Support me on Buy me a coffee!"
+							data-message=""
+							data-color="#FFDD00"
+							data-position="Right"
+							data-x_margin="32"
+							data-y_margin="32"
+						></script>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<main>
 			<div class="container">
@@ -32,19 +70,11 @@
 					<h1>The ROT Algorithm</h1>
 					<p>
 						The
-						<a
-							href="https://en.wikipedia.org/wiki/ROT13"
-							target="_blank"
-							rel="noopener noreferrer"
-							>ROT13</a
-						>
+						<a href="https://en.wikipedia.org/wiki/ROT13">ROT13</a>
 						is a very simple letter substitution cipher that replaces each
 						letter in a text string with the 13th letter after it in the
 						alphabet. The ROT13 is a version of the
-						<a
-							href="https://en.wikipedia.org/wiki/Caesar_cipher"
-							target="_blank"
-							rel="noopener noreferrer"
+						<a href="https://en.wikipedia.org/wiki/Caesar_cipher"
 							>Caesar cipher</a
 						>
 						that was developed in ancient Rome. The original cipher did not have
@@ -58,18 +88,18 @@
 						it, is heavily discouraged when it comes to password encryption.
 						Although is provides some measure of security - albeit very minimal,
 						especially when it comes to more sophisticated means of password
-						cracking - it is mostly reserved for information that need to be
+						cracking - it is mostly reserved for information that needs to be
 						inconspicuous at first, such as spoilers or puzzle solutions.
 					</p>
 				</section>
 				<section>
-					<h1>My Implementation</h1>
+					<h1>This Implementation</h1>
 					<p>
 						Although the ROT13 is the most widely used cipher, I have included
 						here all 13 rotations (ROT1 - ROT13), as well as the option to
-						rotate a sequence backwards as well. Number digits are rotated in
-						the same fashion from 0 through 9 (and backwards), while special
-						characters and symbols remain unaffected.
+						rotate a sequence backwards. Number digits are rotated in the same
+						fashion from 0 through 9 (and backwards), while special characters
+						and symbols remain unaffected.
 					</p>
 				</section>
 				<section>
@@ -94,27 +124,6 @@
 					>Evan Kapantais</a
 				>
 			</p>
-			<ul>
-				<li>
-					<a href="about.html">About</a>
-				</li>
-				<li>
-					<a
-						href="https://github.com/evan-kapantais/rot-generator"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Github</a
-					>
-				</li>
-				<li>
-					<a
-						href="https://github.com/evan-kapantais/rot-generator/issues"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Submit an Issue</a
-					>
-				</li>
-			</ul>
 		</footer>
 	</body>
 </html>

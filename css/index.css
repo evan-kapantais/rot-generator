@@ -1,3 +1,8 @@
+@import 'variables.css';
+@import 'globals.css';
+
+/* Main section */
+
 .main-section {
 	position: relative;
 	display: flex;
@@ -22,83 +27,20 @@
 	display: flex;
 }
 
-.output.active:after {
+.output.copied:after {
+	content: 'Copied!';
 	opacity: 1;
 	transform: translate(-50%, 0);
 }
 
-#text,
-.output {
-	font-size: calc(1rem + 2vw);
-	text-align: center;
-	font-weight: 200;
-	letter-spacing: 2px;
-}
-
-#text {
-	border: none;
-	outline: none;
-	margin: 2rem 0;
-	width: 100%;
-}
-
-.controls {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-}
-
-.checkbox-wrapper {
-	display: flex;
-	align-items: center;
-	gap: 0.4rem;
-}
-
-label {
-	font-size: 0.8rem;
-	display: inline-block;
-	user-select: none;
-}
-
-select:focus,
-select:active {
-	color: var(--link-blue);
-}
-
-.submit-button {
-	display: block;
-	margin: 0 auto;
-	border: none;
-	padding: 0.4rem 0.8rem;
-	letter-spacing: 1px;
-	background: none;
-	font-size: 0.85rem;
-	color: grey;
-	outline: none;
-	cursor: pointer;
-	transition: all 200ms;
-}
-
-.submit-button:hover {
-	color: #222;
-	transform: translateY(-3px);
-}
-
-.submit-button:active {
-	transform: scale(0.9);
-}
-
-.submit-button:focus {
-	color: var(--link-blue);
-}
-
-.output-wrapper {
-	position: relative;
+.output.saved:after {
+	content: 'Saved!';
+	opacity: 1;
+	transform: translate(-50%, 0);
 }
 
 .output:after {
-	content: 'Copied!';
+	content: '';
 	position: absolute;
 	bottom: -3rem;
 	left: 50%;
@@ -109,29 +51,64 @@ select:active {
 	transition: all 200ms;
 }
 
-.copy-button {
+.output.active:after {
+	opacity: 1;
+	transform: translate(-50%, 0);
+}
+
+#text,
+.output {
+	font-size: calc(var(--fontSize-normal) + 2vw);
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+}
+
+#text {
+	border: none;
+	outline: none;
+	margin: 2rem 0;
+}
+
+.output.placeholder {
+	color: grey;
+}
+
+.output-wrapper {
+	position: relative;
+}
+
+.output-button {
 	position: absolute;
 	top: 50%;
-	right: -2rem;
+	right: -3rem;
 	transform: translateY(calc(-50% + 1rem));
 	max-width: 24px;
 	width: 100%;
 	opacity: 0;
 	pointer-events: none;
-	transition: all 200ms;
+	transition: all 200ms ease;
 }
 
-.copy-button.shown {
+.copy-button {
+	right: -3rem;
+}
+
+.save-button {
+	right: calc(-3rem - 24px - var(--spacing-normal));
+}
+
+.output-button.shown {
 	opacity: 1;
 	pointer-events: all;
 	transform: translateY(-50%);
 }
 
-.copy-button.shown:hover {
+.output-button.shown:hover {
 	transform: translateY(calc(-50% - 3px));
 }
 
-.copy-button.shown:active {
+.output-button.shown:active {
 	transform: translateY(-50%) scale(0.9);
 }
 
@@ -139,11 +116,90 @@ img {
 	width: 100%;
 }
 
-.copied {
+/* Strings List */
+
+.strings-list {
 	position: absolute;
-	bottom: -4rem;
-	left: 50%;
-	transform: translateX(-50%);
+	top: 50%;
+	transform: translateY(-50%);
+	left: 2rem;
+}
+
+.strings-list h2 {
+	font-size: var(--fontSize-normal);
+	font-weight: 400;
+	margin-bottom: var(--spacing-large);
+}
+
+.strings-list button {
+	margin-left: 4px;
+}
+
+.strings-list li {
+	margin-bottom: var(--spacing-small);
+	color: var(--color-grey02);
+}
+
+/* Controls */
+
+.controls-form {
+	display: flex;
+	gap: var(--spacing-xxlarge);
+}
+
+fieldset {
+	position: relative;
+	user-select: none;
+	border: none;
+}
+
+.icon {
+	width: 16px;
+	vertical-align: middle;
+}
+
+.control-icon {
+	margin-left: 4px;
+	transition: transform 200ms ease;
+}
+
+.direction-icon.backward {
+	transform: rotate(-180deg);
+}
+
+select {
+	display: block;
+}
+
+.input-group {
+	display: flex;
+	gap: 0.5rem;
+}
+
+input[type='radio'] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+input[type='radio']:checked + label {
+	color: var(--color-black);
+	font-weight: 600;
+}
+
+label,
+legend {
+	font-size: var(--fontSize-small);
+	color: var(--color-grey02);
+	display: inline-block;
+	user-select: none;
+	cursor: pointer;
+	transition: all 150ms;
+}
+
+legend {
+	margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 750px) {
