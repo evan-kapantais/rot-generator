@@ -1,8 +1,4 @@
-// TODO: download strings
-// TODO: delete saved strings
-// TODO: handle duplicate text
 // TODO: refactor messaging
-// TODO: save strings as objects
 
 import alphabet from './alphabet.js';
 
@@ -45,6 +41,7 @@ function setControls(options) {
 function createListElement(text) {
 	const li = document.createElement('li');
 	li.textContent = text;
+	li.dataset.text = text;
 
 	const copyBtn = document.createElement('button');
 	copyBtn.setAttribute('type', 'button');
@@ -160,6 +157,9 @@ function deleteString(str) {
 
 	const filtered = strings.filter((string) => string !== str);
 	localStorage.setItem('rotside_strings', JSON.stringify(filtered));
+
+	const stringDOMElement = document.querySelector(`[data-text="${str}"]`);
+	stringDOMElement.parentElement.removeChild(stringDOMElement);
 }
 
 function downloadSavedStrings() {
