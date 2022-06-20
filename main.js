@@ -1,5 +1,8 @@
 // TODO: download strings
 // TODO: delete saved strings
+// TODO: handle duplicate text
+// TODO: refactor messaging
+// TODO: save strings as objects
 
 import alphabet from './alphabet.js';
 
@@ -37,6 +40,29 @@ function setControls(options) {
 			? true
 			: false;
 	}
+}
+
+function createListElement(text) {
+	const li = document.createElement('li');
+	li.textContent = text;
+
+	const copyBtn = document.createElement('button');
+	copyBtn.setAttribute('type', 'button');
+	copyBtn.className = 'saved-item-button';
+	copyBtn.innerHTML = '<img src="./images/copy.svg" alt="copy" />';
+
+	copyBtn.addEventListener('click', (e) => copyToClipboard(e, text));
+
+	const deleteBtn = document.createElement('button');
+	deleteBtn.setAttribute('type', 'button');
+	deleteBtn.className = 'saved-item-button';
+	deleteBtn.innerHTML = '<img src="./images/x.svg" alt="delete" />';
+
+	deleteBtn.addEventListener('click', () => deleteString(text));
+
+	li.appendChild(copyBtn);
+	li.appendChild(deleteBtn);
+	return li;
 }
 
 function checkLocalStorage() {
@@ -77,8 +103,7 @@ function checkLocalStorage() {
 	const stringsList = document.querySelector('.strings-list ul');
 
 	strings.forEach((string) => {
-		const li = document.createElement('li');
-		li.textContent = string;
+		const li = createListElement(string);
 		stringsList.appendChild(li);
 	});
 
@@ -98,18 +123,21 @@ function showOutputMessage(type) {
 	}, 4000);
 }
 
-function copyToClipboard() {
+function copyToClipboard(e, text = null) {
 	const output = document.querySelector('.output');
-
-	navigator.clipboard.writeText(output.textContent);
+	navigator.clipboard.writeText(text || output.textContent);
 
 	showOutputMessage('copied');
 }
 
 function saveString() {
 	const text = document.querySelector('.output').textContent;
-
 	const strings = JSON.parse(localStorage.getItem('rotside_strings'));
+
+	if (strings.some((string) => string === text)) {
+		return;
+	}
+
 	strings.push(text);
 
 	localStorage.setItem('rotside_strings', JSON.stringify(strings));
@@ -117,8 +145,7 @@ function saveString() {
 	const stringsSection = document.querySelector('.strings-list');
 	const stringsList = document.querySelector('.strings-list ul');
 
-	const li = document.createElement('li');
-	li.textContent = text;
+	const li = createListElement(text);
 	stringsList.appendChild(li);
 
 	showOutputMessage('saved');
@@ -128,12 +155,20 @@ function saveString() {
 	}
 }
 
+function deleteString(str) {
+	const strings = JSON.parse(localStorage.getItem('rotside_strings'));
+
+	const filtered = strings.filter((string) => string !== str);
+	localStorage.setItem('rotside_strings', JSON.stringify(filtered));
+}
+
 function downloadSavedStrings() {
-	const output = document.querySelector('.output');
-	const text = output.textContent;
+	const strings = JSON.parse(localStorage.getItem('rotside_strings')).join(
+		'\n'
+	);
 
 	const link = document.createElement('a');
-	link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
+	link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(strings);
 	link.download = 'rotside.txt';
 	link.click();
 }
