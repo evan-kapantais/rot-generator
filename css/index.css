@@ -140,12 +140,33 @@ img {
 }
 
 .strings-list button {
+	transform: translateY(4px);
+	opacity: 0;
+	transition: all 200ms ease;
+}
+
+.download-button {
 	margin-left: 4px;
+}
+
+.strings-list:hover .download-button {
+	transform: translateY(0);
+	opacity: 1;
 }
 
 .strings-list li {
 	margin-bottom: var(--spacing-small);
 	color: var(--color-grey02);
+}
+
+.saved-item-button {
+	width: 12px;
+	margin-left: var(--spacing-small);
+}
+
+.strings-list li:hover .saved-item-button {
+	transform: translateY(0);
+	opacity: 1;
 }
 
 /* Controls */
