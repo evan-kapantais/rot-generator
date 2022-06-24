@@ -2,173 +2,173 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="Password generator that rotates input using the ROT algorithm."
-		/>
-		<meta
-			name="keywords"
-			content="rot rot 13 password password generator encryption algorithm caesar cipher"
-		/>
-		<meta author="Evan Kapantais" />
-		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-		<link rel="stylesheet" href="./css/index.css" />
-		<title>Rotside</title>
-	</head>
-	<body>
-		<header>
-			<div>
-				<a href="index.html" class="brand-link">
-					<h1 class="brand">ROTSIDE_</h1>
-				</a>
-			</div>
-			<nav>
-				<ul class="nav-list">
-					<li>
-						<a class="nav-link" href="about.html">About</a>
-					</li>
-					<li>
-						<a
-							class="nav-link"
-							href="https://github.com/evan-kapantais/rot-generator"
-							target="_blank"
-							rel="noreferrer"
-							>Github</a
-						>
-					</li>
-					<li>
-						<a
-							class="nav-link"
-							href="https://github.com/evan-kapantais/rot-generator/issues"
-							target="_blank"
-							rel="noreferrer"
-							>Submit an Issue</a
-						>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section class="main-section">
-				<input type="text" id="text" placeholder="Your text here" required />
-			</section>
-			<section class="strings-list">
-				<h2>
-					Saved
-					<button type="button" class="download-button">
-						<img class="icon" src="./images/download.svg" alt="download" />
-					</button>
-				</h2>
-				<ul></ul>
-			</section>
-			<section class="main-section">
-				<div class="output-wrapper">
-					<p class="output placeholder">Your output here</p>
-					<button type="button" class="output-button copy-button">
-						<img src="./images/copy.svg" alt="copy icon" />
-					</button>
-					<button type="button" class="output-button save-button">
-						<img src="./images/save.svg" alt="save icon" />
-					</button>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<form class="controls-form">
-				<fieldset>
-					<legend>
-						<label for="algo">Algorithm</label>
-						<img
-							class="icon control-icon code-icon"
-							src="./images/code-1.svg"
-							alt="code icon"
-						/>
-					</legend>
-					<select name="algo" id="algo">
-						<option value="rot1">ROT1</option>
-						<option value="rot2">ROT2</option>
-						<option value="rot3">ROT3</option>
-						<option value="rot4">ROT4</option>
-						<option value="rot5">ROT5</option>
-						<option value="rot6">ROT6</option>
-						<option value="rot7">ROT7</option>
-						<option value="rot8">ROT8</option>
-						<option value="rot9">ROT9</option>
-						<option value="rot10">ROT10</option>
-						<option value="rot11">ROT11</option>
-						<option value="rot12">ROT12</option>
-						<option value="rot13">ROT13</option>
-					</select>
-				</fieldset>
-				<fieldset>
-					<legend>
-						<span> Direction</span>
-						<img
-							class="icon control-icon direction-icon"
-							src="./images/arrow-right.svg"
-							alt="right arrow"
-						/>
-					</legend>
-					<div class="input-group">
-						<div>
-							<input
-								type="radio"
-								name="direction"
-								id="backward"
-								value="backward"
-							/>
-							<label for="backward">Backward</label>
-						</div>
-						<div>
-							<input
-								type="radio"
-								id="forward"
-								name="direction"
-								value="forward"
-								checked
-							/>
-							<label for="forward">Forward</label>
-						</div>
-					</div>
-				</fieldset>
-				<fieldset>
-					<legend>
-						<span> Trim Whitespace </span>
-						<img
-							class="icon control-icon"
-							src="./images/scissor.svg"
-							alt="scissors"
-						/>
-					</legend>
-					<div class="input-group">
-						<div>
-							<input type="radio" id="yes" name="trim" value="true" checked />
-							<label for="yes" name="trim">Yes</label>
-						</div>
-						<div>
-							<input type="radio" id="no" name="trim" value="false" />
-							<label for="no" name="trim">No</label>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-			<script
-				data-name="BMC-Widget"
-				data-cfasync="false"
-				src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-				data-id="evankapantais"
-				data-description="Support me on Buy me a coffee!"
-				data-message=""
-				data-color="#FFDD00"
-				data-position="Right"
-				data-x_margin="32"
-				data-y_margin="32"
-			></script>
-		</footer>
-		<script type="module" src="main.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Password generator that rotates input using the ROT algorithm."
+    />
+    <meta
+      name="keywords"
+      content="rot rot 13 password password generator encryption algorithm caesar cipher"
+    />
+    <meta author="Evan Kapantais" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Rotside</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="index.html" class="brand-link">
+          <h1 class="brand">ROTSIDE_</h1>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="https://github.com/evan-kapantais/rot-generator"
+              target="_blank"
+              rel="noreferrer"
+              >Github</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="https://github.com/evan-kapantais/rot-generator/issues"
+              target="_blank"
+              rel="noreferrer"
+              >Submit an Issue</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-section">
+        <input type="text" id="text" placeholder="Your text here" required />
+      </section>
+      <section class="strings-list">
+        <h2>
+          Saved
+          <button type="button" class="download-button">
+            <img class="icon" src="./images/download.svg" alt="download" />
+          </button>
+        </h2>
+        <ul></ul>
+      </section>
+      <section class="main-section">
+        <div class="output-wrapper">
+          <p class="output placeholder">Your output here</p>
+          <button type="button" class="output-button copy-button">
+            <img src="./images/copy.svg" alt="copy icon" />
+          </button>
+          <button type="button" class="output-button save-button">
+            <img src="./images/save.svg" alt="save icon" />
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <form class="controls-form">
+        <fieldset>
+          <legend>
+            <label for="algo">Algorithm</label>
+            <img
+              class="icon control-icon code-icon"
+              src="./images/code-1.svg"
+              alt="code icon"
+            />
+          </legend>
+          <select name="algo" id="algo">
+            <option value="rot1">ROT1</option>
+            <option value="rot2">ROT2</option>
+            <option value="rot3">ROT3</option>
+            <option value="rot4">ROT4</option>
+            <option value="rot5">ROT5</option>
+            <option value="rot6">ROT6</option>
+            <option value="rot7">ROT7</option>
+            <option value="rot8">ROT8</option>
+            <option value="rot9">ROT9</option>
+            <option value="rot10">ROT10</option>
+            <option value="rot11">ROT11</option>
+            <option value="rot12">ROT12</option>
+            <option value="rot13">ROT13</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>
+            <span> Direction</span>
+            <img
+              class="icon control-icon direction-icon"
+              src="./images/arrow-right.svg"
+              alt="right arrow"
+            />
+          </legend>
+          <div class="input-group">
+            <div>
+              <input
+                type="radio"
+                name="direction"
+                id="backward"
+                value="backward"
+              />
+              <label for="backward">Backward</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="forward"
+                name="direction"
+                value="forward"
+                checked
+              />
+              <label for="forward">Forward</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            <span> Trim Whitespace </span>
+            <img
+              class="icon control-icon"
+              src="./images/scissor.svg"
+              alt="scissors"
+            />
+          </legend>
+          <div class="input-group">
+            <div>
+              <input type="radio" id="yes" name="trim" value="true" checked />
+              <label for="yes" name="trim">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no" name="trim" value="false" />
+              <label for="no" name="trim">No</label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <script
+        data-name="BMC-Widget"
+        data-cfasync="false"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="evankapantais"
+        data-description="Support me on Buy me a coffee!"
+        data-message=""
+        data-color="#FFDD00"
+        data-position="Right"
+        data-x_margin="32"
+        data-y_margin="32"
+      ></script>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
