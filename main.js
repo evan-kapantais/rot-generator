@@ -1,4 +1,5 @@
 // TODO: refactor messaging
+// TODO: save with identifier
 
 import alphabet from './alphabet.js';
 
